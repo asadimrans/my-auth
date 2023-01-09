@@ -1,0 +1,14 @@
+<%= form_with model: User, url: login_path do |f| %>
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email, required: true %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password, required: true %>
+  </div>
+  <%= f.submit "Sign In" %>
+<% end %>
+
+<%= link_to "Sign up", sign_up_path %>
+<%= link_to "Forgot Password?", new_password_path %>
